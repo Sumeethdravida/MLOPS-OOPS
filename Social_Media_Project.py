@@ -66,4 +66,4 @@ class EightMate:
         print("\n")
         self.menu()
 
-obj = EightMate()
+user1 = EightMate()
