@@ -20,7 +20,7 @@ class EightMate:
         elif user_input == "3":
             self.post()
         elif user_input == "4":
-            pass
+            self.sendmsg()
         else:
             exit()
         
