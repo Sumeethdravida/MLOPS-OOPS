@@ -16,9 +16,9 @@ class EightMate:
         if user_input == "1":
             self.signup()
         elif user_input == "2":
-            pass
+            self.signin()
         elif user_input == "3":
-            pass
+            self.post()
         elif user_input == "4":
             pass
         else:
@@ -41,10 +41,29 @@ class EightMate:
             pwd = input("Enter your password here: ")
             if self.username==uname and self.password == pwd:
                 print("You have signed in successfully!")
-            self.loggedin = True
+                self.loggedin = True
+            else:
+                print("Please input the correct credentials")
+        print("\n")
+        self.menu()
 
-    
+    def post(self):
+        if self.loggedin ==True:
+            txt = input("Enter your message here: ")
+            print(f"The following content has been posted: {txt}")
+        else:
+            print("Please sign in first to write a post")
+        print("\n")
+        self.menu()
 
-
+    def sendmsg(self):
+        if self.loggedin == True:
+            txt = input("Enter your message here: ")
+            frnd = input("Enter the name of the friend: ")
+            print(f"Your message has been sent to {frnd}")
+        else:
+            print("You need to signin first to send a message!")
+        print("\n")
+        self.menu()
 
 obj = EightMate()
